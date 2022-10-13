@@ -13,11 +13,15 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.media3.common.MediaItem
 import androidx.media3.exoplayer.ExoPlayer
 import androidx.media3.ui.PlayerView
+import com.example.mediaplayerdemo.databinding.ActivityMainBinding
 import com.example.mediaplayerdemo.ui.theme.MediaPlayerDemoTheme
 
 class MainActivity : ComponentActivity() {
 
+    private lateinit var binding: ActivityMainBinding
     private lateinit var mediaPlayer: ExoPlayer
+    val mediaItems = arrayListOf<MediaItem>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
@@ -29,14 +33,19 @@ class MainActivity : ComponentActivity() {
         playerView.player = mediaPlayer
 
         val mediaItem = MediaItem.fromUri("https://storage.googleapis.com/exoplayer-test-media-0/BigBuckBunny_320x180.mp4")
-        mediaPlayer.setMediaItem(mediaItem)
+        val mediaItemTwo = MediaItem.fromUri("https://samplelib.com/lib/preview/mp4/sample-10s.mp4")
+        mediaItems.add(mediaItem)
+        mediaItems.add(mediaItemTwo)
+
+        mediaPlayer.setMediaItems(mediaItems)
+        mediaPlayer.playWhenReady = true
     }
 
     override fun onStart() {
         super.onStart()
 
-        mediaPlayer.prepare()
-        mediaPlayer.play()
+        //mediaPlayer.prepare()
+        //mediaPlayer.play()
     }
 
     override fun onStop() {
