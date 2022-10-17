@@ -3,6 +3,7 @@ package com.example.mediaplayerdemo
 import androidx.lifecycle.ViewModel
 import com.example.mediaplayerdemo.model.MediaState
 import com.example.mediaplayerdemo.model.PlayerUiState
+import com.google.android.exoplayer2.ExoPlayer
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.update
@@ -11,6 +12,7 @@ import javax.inject.Inject
 @HiltViewModel
 class PlayerViewModel @Inject constructor(
     richRepository: RichRepository,
+    val player: ExoPlayer,
 ) : ViewModel() {
 
     private val _uiState = MutableStateFlow(PlayerUiState.INITIAL)

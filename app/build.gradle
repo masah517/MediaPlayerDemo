@@ -71,10 +71,15 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-test-manifest:$compose_ui_version"
 
 
-    def media3_version = "1.0.0-beta02"
-
-
+    def exo2_version = "2.18.1"
     // For media playback using ExoPlayer
+    implementation "com.google.android.exoplayer:exoplayer:$exo2_version"
+    implementation "com.google.android.exoplayer:exoplayer-core:$exo2_version"
+    implementation "com.google.android.exoplayer:exoplayer-dash:$exo2_version"
+    implementation "com.google.android.exoplayer:exoplayer-ui:$exo2_version"
+
+
+    def media3_version = "1.0.0-beta02"
     implementation "androidx.media3:media3-exoplayer:$media3_version"
     implementation "androidx.media3:media3-ui:$media3_version"
     implementation "androidx.media3:media3-session:$media3_version"

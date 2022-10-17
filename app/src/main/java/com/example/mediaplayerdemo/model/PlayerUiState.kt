@@ -1,6 +1,7 @@
 package com.example.mediaplayerdemo.model
 
-import androidx.media3.common.MediaItem
+import com.google.android.exoplayer2.MediaItem
+
 
 data class PlayerUiState(
     val mediaState: MediaState,

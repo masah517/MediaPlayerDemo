@@ -61,8 +61,9 @@ fun ItemDescriptionScreen(
                     onClickPlayerViewCallback = viewModel::emitEvent,
                     playWhenReady = uiState.mediaState.playWhenReady,
                     showController = uiState.isMediaControllerShown,
+                    player = viewModel.player,
                 )
-
+                /*
                 IconButton(onClick = {
                     viewModel.emitEvent(Event.onMediaPlayerClickEvent)
                 }) {
@@ -72,7 +73,7 @@ fun ItemDescriptionScreen(
                         tint = Color.Blue,
                         modifier = Modifier.size(60.dp),
                     )
-                }
+                }*/
             }
         }
     }
