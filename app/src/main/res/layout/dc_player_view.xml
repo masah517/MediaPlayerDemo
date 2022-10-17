@@ -10,6 +10,7 @@
         android:layout_height="0dp"
         app:auto_show="false"
         app:use_controller="true"
+        app:show_timeout="3000"
         app:controller_layout_id="@layout/custom_controller_panel"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

@@ -79,12 +79,6 @@ dependencies {
     implementation "com.google.android.exoplayer:exoplayer-ui:$exo2_version"
 
 
-    def media3_version = "1.0.0-beta02"
-    implementation "androidx.media3:media3-exoplayer:$media3_version"
-    implementation "androidx.media3:media3-ui:$media3_version"
-    implementation "androidx.media3:media3-session:$media3_version"
-    implementation "androidx.media3:media3-common:$media3_version"
-
 
     // Concurrent future
     implementation "androidx.concurrent:concurrent-futures-ktx:1.1.0"
